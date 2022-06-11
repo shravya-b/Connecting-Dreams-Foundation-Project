@@ -41,6 +41,19 @@ app.get("/ngoDashboard", function (req, res) {
   res.render("ngoDashboard/ngoDashboard");
 });
 
+app.get("/changeMakersDashboard", function (req, res) {
+  res.render("changeMakersDashboard/changemakersDashboard");
+});
+
+app.get("/mentorsDashboard", function (req, res) {
+  res.render("mentorDashboard/mentorsDashboard");
+});
+
+app.get("/adminDashboard", function (req, res) {
+  res.render("adminDashboard/adminDashboard");
+});
+
+
 app.get("/ngo/form", (req, res) => {
   res.render("forms/forms");
 });
