@@ -20,9 +20,9 @@ exports.postLogin = async (req, res, next) => {
   if (user[0] === "NGO") {
     return res.redirect("/ngoDashboard");
   } else if (user[0] === "yct") {
-    return res.redirect("login successful");
+    return res.send("login successful");
   } else if (user[0] === "MENTOR") {
-    return res.redirect("login successful");
+    return res.send("login successful");
   }
   return res.redirect("/auth/login");
 };
