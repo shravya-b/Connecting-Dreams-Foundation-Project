@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/form/form.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <title>Responsive Regisration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>Create a new Event</header>
+
+      <form action="#">
+        <div class="form first">
+          <div class="details personal">
+            <br />
+            <span class="title">Contact Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label>Full Name of the POC</label>
+                <input type="text" placeholder="Enter your name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Date to be published</label>
+                <input type="date" placeholder="Enter birth date" required />
+              </div>
+
+              <div class="input-field">
+                <label>Email of the POC for the event</label>
+                <input type="text" placeholder="Enter your email" required />
+              </div>
+
+              <div class="input-field">
+                <label>Mobile Number of the POC for the event</label>
+                <input
+                  type="number"
+                  placeholder="Enter mobile number"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Position of the POC</label>
+                <input
+                  type="text"
+                  placeholder="Enter your ccupation"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="details ID">
+            <span class="title">Case Study Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Title</label>
+                <input
+                  type="text"
+                  placeholder="Enter title of the case study"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Tags</label>
+                <input
+                  type="text"
+                  placeholder="Enter Tags seperated by a comma"
+                  required
+                />
+              </div>
+
+              <!-- <div id="tags">
+                          <span>php</span>
+                          <span>c++</span>
+                          <span>jquery</span>
+                          <input type="text" value="" placeholder="Add a tag" />
+                        </div>                       -->
+
+              <div class="input-field">
+                <label>When should the hackathon be published</label>
+                <input
+                  type="date"
+                  placeholder="Enter your issued date"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>When should the hackathon end</label>
+                <input type="date" placeholder="Enter expiry date" required />
+              </div>
+
+              <div class="input-field-text">
+                <label>Short Description</label>
+                <textarea
+                  row="100"
+                  ,
+                  cols="500"
+                  placeholder="Short Description of 100 words"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="input-field-text">
+                <label>Long Description</label>
+                <textarea
+                  row="100"
+                  ,
+                  cols="500"
+                  placeholder="Long Description of 300 words"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="input-field-text">
+                <label>Requirement</label>
+                <textarea
+                  row="100"
+                  ,
+                  cols="500"
+                  placeholder="Requirement in 300 words"
+                  required
+                ></textarea>
+              </div>
+              <div class="input-field-text">
+                <label>Upload Pdf</label>
+                <input
+                  style="padding: 7px"
+                  name="userfile"
+                  type="file"
+                  accept="application/pdf, application/vnd.ms-excel"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="sumbit">
+            <span class="btnText">Submit</span>
+            <i class="uil uil-navigator"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

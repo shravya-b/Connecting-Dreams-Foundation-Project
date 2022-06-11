@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/auth/loginpage.css">
+</head>
+
+<body>
+    <div class="cont">
+        <form action="/auth/login" class="form sign-in" method="post">
+            <h2>Welcome</h2>
+            <label>
+                <span>Email/User Name</span>
+                <input type="email" name="email" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password" />
+            </label>
+            <!-- <p class="forgot-pass">Forgot password?</p> -->
+            <button type="submit" class="submit">Sign In</button>
+
+        </form>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+
+                    <h3>Don't have an account? Please Sign up!<h3>
+                </div>
+                <div class="img__text m--in">
+
+                    <h3>If you already has an account, just sign in.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Sign Up</span>
+                    <span class="m--in">Sign In</span>
+                </div>
+            </div>
+            <form action="/auth/signup" class="form sign-up" method="post">
+                <h2>Create your Account</h2>
+                <label for="members">
+                    <span>MEMBERSHIP TYPE:</span>
+                    <select name="members" id="members">
+                        <option value="select">Select</option>
+                        <option value="yct">Youth changemaker Team</option>
+                        <option value="NGO">NGO</option>
+                        <option value="MENTOR">Mentor</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name" />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" />
+                </label>
+                <label>
+                    <span>User Name</span>
+                    <input type="email" name="username" />
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" />
+                </label>
+                <button type="submit" class="submit">Sign Up</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function () {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    </script>
+</body>
+
+</html>
