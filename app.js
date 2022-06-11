@@ -13,6 +13,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+let redirectLink;
+
 app.set("view engine", "ejs");
 app.set("views", "views");
 
@@ -34,21 +36,32 @@ app.get("/", (req, res, next) => {
 app.get("/500", error_controller.get_error_500);
 
 app.get("/ngoDashboard", function (req, res) {
-  res.render("ngoDashboard/ngoDashboard");
+  redirectLink = "/ngoDashboard";
+  res.render("ngoDashboard/ngoDashboard", { redirectLink: redirectLink });
 });
 
 app.get("/changeMakersDashboard", function (req, res) {
-  res.render("changeMakersDashboard/changemakersDashboard");
+  redirectLink = "/changeMakersDashboard";
+  res.render("changeMakersDashboard/changemakersDashboard", {
+    redirectLink: redirectLink,
+  });
 });
 
 app.get("/mentorsDashboard", function (req, res) {
-  res.render("mentorDashboard/mentorsDashboard");
+  redirectLink = "/mentorsDashboard";
+  res.render("mentorDashboard/mentorsDashboard", {
+    redirectLink: redirectLink,
+  });
 });
 
 app.get("/adminDashboard", function (req, res) {
-  res.render("adminDashboard/adminDashboard");
+  redirectLink = "/adminDashboard";
+  res.render("adminDashboard/adminDashboard", { redirectLink: redirectLink });
 });
 
+app.get("/user/profile", function (req, res) {
+  res.render("profile/profile", { redirectLink: redirectLink });
+});
 
 app.get("/ngo/form", (req, res) => {
   res.render("forms/forms");
