@@ -28,8 +28,12 @@ app.get("/favicon.ico", (req, res, next) => {
 });
 
 app.get("/", (req, res, next) => {
-  res.send("Hello World");
+  res.sendFile(__dirname + '/index.html');
 });
+
+
+
+
 
 app.get("/500", error_controller.get_error_500);
 
