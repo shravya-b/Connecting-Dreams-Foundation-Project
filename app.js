@@ -67,9 +67,14 @@ app.get("/ngo/form", (req, res) => {
   res.render("forms/forms");
 });
 
-app.get("/eventPage", function(req, res){
-  res.render('eventPage');
-})
+app.get("/eventPage", function (req, res) {
+  res.render("eventPage");
+});
+
+app.post("/uploaded", (req, res) => {
+  console.log(req.body);
+  res.redirect("/ngoDashboard");
+});
 
 app.use(error_controller.get_error_404);
 

@@ -21,7 +21,7 @@
     <div class="container">
       <header>Create a new Event</header>
 
-      <form action="#">
+      <form action="/uploaded" method="POST">
         <div class="form first">
           <div class="details personal">
             <br />
@@ -29,18 +29,29 @@
             <div class="fields">
               <div class="input-field">
                 <label>Name of the NGO</label>
-                <input type="text" placeholder="Enter name" required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter name"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>Email</label>
-                <input type="text" placeholder="Enter email" required />
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter email"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>Phone</label>
                 <input
                   type="number"
+                  name="phn"
                   placeholder="Phone number"
                   required
                 />
@@ -58,6 +69,7 @@
                 <label>Title of the Event</label>
                 <input
                   type="text"
+                  name="title"
                   placeholder="Enter title of the case study"
                   required
                 />
@@ -67,6 +79,7 @@
                 <label>Tags</label>
                 <input
                   type="text"
+                  name="tags"
                   placeholder="Enter Tags seperated by a comma"
                   required
                 />
@@ -79,8 +92,6 @@
                           <input type="text" value="" placeholder="Add a tag" />
                         </div>                       -->
 
-
-
               <div class="input-field-text">
                 <label>Description</label>
                 <textarea
@@ -88,6 +99,7 @@
                   ,
                   cols="500"
                   placeholder="Short Description of 100 words"
+                  name="description"
                   required
                 ></textarea>
               </div>
@@ -99,6 +111,7 @@
                   ,
                   cols="500"
                   placeholder="Requirement in 300 words"
+                  name="requirements"
                   required
                 ></textarea>
               </div>
