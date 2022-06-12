@@ -14,6 +14,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 let redirectLink;
+let ngoName, email, phn, title, tags, description, requirements;
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -68,12 +69,26 @@ app.get("/ngo/form", (req, res) => {
 });
 
 app.get("/eventPage", function (req, res) {
-  res.render("eventPage");
+  res.render("eventPage", {
+    ngoName: ngoName,
+    eventTags: tags,
+    emailId: email,
+    phoneNumber: phn,
+    eventTitle: title,
+    eventDescription: description,
+    eventRequirements: requirements,
+  });
 });
 
 app.post("/uploaded", (req, res) => {
-  console.log(req.body);
-  res.redirect("/ngoDashboard");
+  ngoName = req.body.ngoName;
+  email = req.body.email;
+  phn = req.body.phn;
+  title = req.body.title;
+  tags = req.body.tags;
+  description = req.body.description;
+  requirements = req.body.requirements;
+  res.redirect("/eventPage");
 });
 
 app.use(error_controller.get_error_404);
