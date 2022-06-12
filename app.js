@@ -67,6 +67,10 @@ app.get("/ngo/form", (req, res) => {
   res.render("forms/forms");
 });
 
+app.get("/eventPage", function(req, res){
+  res.render('eventPage');
+})
+
 app.use(error_controller.get_error_404);
 
 const port = process.env.PORT;
